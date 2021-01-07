@@ -1,0 +1,175 @@
+$smart: #9ce985;
+$next: #f8e8e9;
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: $next;
+  color: $smart;
+  border-bottom: 1px solid $smart;
+  text-align: center;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.navbar {
+  border-bottom: 1px solid $smart;
+  color: $smart;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  .flex-item {
+    padding: 10px;
+    flex: 50%;
+  }
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 10px;
+
+  .grid-item {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.sort-options {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+
+  li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 12px;
+
+    &:first-child {
+      border-right: 1px solid $smart;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.search-box-wrapper {
+  width: 100%;
+  text-align: center;
+
+  .search-box {
+    width: 65%;
+    height: 30px;
+    border-color: $smart;
+    padding: 5px;
+  }
+}
+
+.card {
+  width: 70%;
+  border: 1px solid $smart;
+  .img-container {
+    width: 100%;
+    min-height: 175px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.like-button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: underline;
+  color: $smart;
+  outline: 0;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .comment-item {
+    background-color: $next;
+    border-bottom: 1px solid $smart;
+    padding: 5px;
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+.input-group {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  div {
+    display: table-cell;
+    border: 1px solid $smart;
+    vertical-align: middle;
+  }
+  .input-group-icon {
+    background: $smart;
+    color: #222;
+    padding: 0 12px;
+    cursor: pointer;
+  }
+  .input-group-area {
+    width: 100%;
+  }
+  input {
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    outline: 0;
+  }
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
+.customModal {
+  padding: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card {
+    width: 100%;
+  }
+}
